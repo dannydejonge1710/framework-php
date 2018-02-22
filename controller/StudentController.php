@@ -5,7 +5,7 @@ require(ROOT . "model/StudentModel.php");
 function index()
 {
 	render("student/index", array(
-		'students' => getAllStudents()
+		'birthdays' => getAllBirthdays()
 	));
 }
 
@@ -16,7 +16,7 @@ function create()
 
 function createSave()
 {
-	if (!createStudent()) {
+	if (!createBirthday()) {
 		header("Location:" . URL . "error/index");
 		exit();
 	}
@@ -24,29 +24,43 @@ function createSave()
 	header("Location:" . URL . "student/index");
 }
 
-function edit($id)
+function deleteThis($id)
+{
+	if (!deleteBirthday($id)) {
+		header("Location:" . URL . "error/index");
+		exit();
+	}
+
+	deleteBirthday($id);
+	header("Location:" . URL . "student/index");
+}
+
+
+
+
+
+
+
+
+
+
+
+function editThis($id)
 {
 	render("student/edit", array(
-		'student' => getStudent($id)
+		'student' => getOneBirthday($id)
 	));
 }
 
-function editSave()
+function editSaveThis()
 {
-	if (!editStudent()) {
+	if (!editBirthday()) {
 		header("Location:" . URL . "error/index");
 		exit();
 	}
 
+	editBirthday();
 	header("Location:" . URL . "student/index");
 } 
 
-function delete($id)
-{
-	if (!deleteStudent($id)) {
-		header("Location:" . URL . "error/index");
-		exit();
-	}
 
-	header("Location:" . URL . "student/index");
-}

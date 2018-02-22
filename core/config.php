@@ -1,10 +1,10 @@
 <?php
 
 define('DB_TYPE', 'mysql');
-define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'framework');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'Kalender');
+define('DB_USER', 'root2');
+define('DB_PASS', 'danny');
 define('DB_CHARSET', 'utf8');
 
 define('URL_PUBLIC_FOLDER', 'public');
