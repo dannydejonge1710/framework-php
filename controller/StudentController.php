@@ -45,6 +45,7 @@ function deleteThis($id)
 
 
 
+
 function editThis($id)
 {
 	render("student/edit", array(
@@ -52,7 +53,7 @@ function editThis($id)
 	));
 }
 
-function editSaveThis()
+function editSaveThis($id)
 {
 	if (!editBirthday()) {
 		header("Location:" . URL . "error/index");
