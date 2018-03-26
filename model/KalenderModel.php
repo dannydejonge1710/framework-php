@@ -18,7 +18,7 @@ function getAllBirthdays()
 {
 	$db = openDatabaseConnection();
 
-	$sql = "SELECT * FROM birthdays ORDER BY  month ASC";
+	$sql = "SELECT * FROM birthdays ORDER BY month ASC";
 	$query = $db->prepare($sql);
 	$query->execute();
 
@@ -55,7 +55,7 @@ function createBirthday()
 	return true;
 }
 
-function deleteBirthday($id = null) 
+function deleteBirthday($id) 
 {
 	if (!$id) {
 		return false;

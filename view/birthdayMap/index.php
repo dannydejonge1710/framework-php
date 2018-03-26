@@ -1,5 +1,7 @@
 <div class="container">
 
+	<h1>Birthdays</h1>
+
 	<?php foreach ($birthdays as $birthday) { 
 		if ($month != $birthday['month'] ) {
 			$month = $birthday['month'];
@@ -7,17 +9,17 @@
 		}
 
 		if ($day != $birthday['day'] ) {
+			$id = $birthday['id'];
 			$day = $birthday['day'];
 			$person = $birthday['person'];
 			$year = $birthday['year'];
 			echo "<h2>". $day . "</h2>";
 			
-			echo "<p><a href= '" . URL . "/student/editThis/"  . "' > ". $person ." " .$year . "</a>" .  "<a href= '" . URL . "/student/deleteThis/" . "' >" . " x" . "</a>" . "</p>";
+			echo "<p><a href=
+			 '" . URL . "/Kalender/edit/" . $id  . "' > " . $person ." " .$year . "</a>" .  "<a href= '" . URL . "/Kalender/deleteThis/" . $id . "' >" . " x" . "</a>" . "</p>";
 		} 
-
 	?>
-
 	<?php } ?>
 
-	<a href="<?= URL ?>student/create">Toevoegen</a>
+	<p><a href="<?= URL ?>Kalender/create">Toevoegen</a></p>
 </div>
