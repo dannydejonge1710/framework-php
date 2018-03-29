@@ -17,7 +17,7 @@ function create()
 function createSave()
 {
 	if (!createBirthday()) {
-		header("Location:" . URL . "Error/index");
+		header("Location:" . URL . "error/index");
 		exit();
 	}
 
@@ -28,7 +28,7 @@ function createSave()
 function deleteThis($id)
 {
 	if (!deleteBirthday($id)) {
-		header("Location:" . URL . "Error/index");
+		header("Location:" . URL . "error/index");
 		exit();
 	}
 
@@ -44,17 +44,17 @@ function deleteThis($id)
 
 
 
-function edit($id)
+function editThis($id)
 {
 	render("birthdayMap/edit", array(
 		'birthdays' => getOneBirthday($id)
 	));
 }
 
-function editSave()
+function editSaveThis()
 {
 	if (!editBirthday()) {
-		header("Location:" . URL . "Error/index");
+		header("Location:" . URL . "error/index");
 		exit();
 	}
 
