@@ -16,7 +16,7 @@ function create()
 
 function createSave()
 {
-	if (!createBirthday()) {
+	if (!createBirthday($_POST)) {
 		header("Location:" . URL . "error/index");
 		exit();
 	}
@@ -53,7 +53,7 @@ function editThis($id)
 
 function editSaveThis()
 {
-	if (!editBirthday()) {
+	if (!editBirthday($_POST)) {
 		header("Location:" . URL . "error/index");
 		exit();
 	}

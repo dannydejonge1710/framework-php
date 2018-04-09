@@ -14,10 +14,10 @@
 			$person = $birthday['person'];
 			$year = $birthday['year'];
 			echo "<h2>". $day . "</h2>";
-			
+		}	
 			echo "<p><a href=
 			 '" . URL . "/Kalender/editThis/" . $id  . "' > " . $person ." " .$year . "</a>" .  "<a href= '" . URL . "/Kalender/deleteThis/" . $id . "' >" . " x" . "</a>" . "</p>";
-		} 
+		
 	?>
 	<?php } ?>
 
