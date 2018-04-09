@@ -9,12 +9,16 @@
 		}
 
 		if ($day != $birthday['day'] ) {
-			$id = $birthday['id'];
+			
 			$day = $birthday['day'];
-			$person = $birthday['person'];
-			$year = $birthday['year'];
+		
 			echo "<h2>". $day . "</h2>";
 		}	
+
+			$id = $birthday['id'];
+			$person = $birthday['person'];
+			$year = $birthday['year'];
+
 			echo "<p><a href=
 			 '" . URL . "/Kalender/editThis/" . $id  . "' > " . $person ." " .$year . "</a>" .  "<a href= '" . URL . "/Kalender/deleteThis/" . $id . "' >" . " x" . "</a>" . "</p>";
 		
